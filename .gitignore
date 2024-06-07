@@ -133,3 +133,6 @@ dmypy.json
 
 # docker
 data/
+
+data_cifar
+saved

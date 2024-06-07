@@ -51,9 +51,9 @@ def calibration(true_labels, pred_labels, confidences, num_bins=15):
     bins = np.linspace(0.0, 1.0, num_bins + 1)
     indices = np.digitize(confidences, bins, right=True)
 
-    bin_accuracies = np.zeros(num_bins, dtype=np.float)
-    bin_confidences = np.zeros(num_bins, dtype=np.float)
-    bin_counts = np.zeros(num_bins, dtype=np.int)
+    bin_accuracies = np.zeros(num_bins, dtype=float)
+    bin_confidences = np.zeros(num_bins, dtype=float)
+    bin_counts = np.zeros(num_bins, dtype=int)
 
     for b in range(num_bins):
         selected = np.where(indices == b + 1)[0]
